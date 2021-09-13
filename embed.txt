@@ -1,0 +1,136 @@
+Embed
+message.channel.send(new Discord.MessageEmbed()
+            .setColor(config.embed.color)      
+            .setTitle('Embed')
+            .setDescription(`Embed`)
+            .setFooter(config.embed.botby, config.embed.logo)
+        )
+
+Bienvenue
+message.channel.send(new Discord.MessageEmbed()
+            .setColor(config.embed.color)      
+            .setTitle('Bienvenue !')
+            .setDescription(`${member} a rejoint le serveur. Bienvenue ! \Nous sommes maintenant **${member.guild.memberCount}** !`)
+            .setFooter(config.embed.botby, config.embed.logo)
+        )
+
+Member leave
+message.channel.send(new Discord.MessageEmbed()
+            .setColor(config.embed.color)      
+            .setTitle('Leave')
+            .setDescription(`${member} a quitté le serveur.`)
+            .setFooter(config.embed.botby, config.embed.logo)
+        )
+
+Ban
+message.channel.send(new Discord.MessageEmbed()
+            .setColor(config.embed.color)      
+            .setTitle('Ban')
+            .setDescription(`${member} a été banni pour ${reason} !`)
+            .setFooter(config.embed.botby, config.embed.logo)
+        )
+
+banlog
+member.guild.channels.cache.get(config.greeting.log).send( new Discord.MessageEmbed()
+        .setTitle('Ban')
+        .setDescription(`Joueur : **${member}**\nModérateur : ** <@${user}> **\nRaison : **${reason}*`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+    )
+
+clear
+message.channel.send(new Discord.MessageEmbed()
+            .setColor(config.embed.color)      
+            .setTitle('Clear')
+            .setDescription(`${size - 1} messages ont été supprimés !`)
+            .setFooter(config.embed.botby, config.embed.logo)
+        )
+
+clearlog
+message.channel.send(new Discord.MessageEmbed()
+            .setColor(config.embed.color)      
+            .setTitle('Clear')
+            .setDescription(`Nb de messages : **${size - 1}**\nModérateur : ** <@${user}> **`)
+            .setFooter(config.embed.botby, config.embed.logo)
+        )
+
+kick
+message.channel.send(new Discord.MessageEmbed()
+        .setTitle('Kick')
+        .setDescription(`${member} a été kick pour ${reason} !`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+    )
+
+kicklog
+member.guild.channels.cache.get(config.greeting.log).send( new Discord.MessageEmbed()
+        .setTitle('Kick')
+        .setDescription(`Joueur : **${member}**\nModérateur : ** <@${user}> **\nRaison : **${reason}**`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+    )
+
+mute
+message.channel.send(new Discord.MessageEmbed()
+        .setTitle('Mute')
+        .setDescription(`${member} a été kick pour ${reason} !`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+    )
+
+mutelog
+member.guild.channels.cache.get(config.greeting.log).send( new Discord.MessageEmbed()
+        .setTitle('Mute')
+        .setDescription(`Joueur : **${member}**\nModérateur : ** <@${user}> **\nRaison : **${reason}**`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+    )
+
+tempban
+  message.channel.send(new Discord.MessageEmbed()
+        .setTitle('TempBan')
+        .setDescription(`${member} a été banni pendant ${humanizeDuration(duration, {language: 'fr'})} pour ${reason} !`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+    )
+
+tempbanlog
+  member.guild.channels.cache.get(config.greeting.log).send( new Discord.MessageEmbed()
+        .setTitle('TempBan')
+        .setDescription(`Joueur : **${member}**\nModérateur : ** <@${user}> **\nDurée : **${humanizeDuration(duration, {language: 'fr'})}**\nRaison : **${reason}**`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+  )
+
+tempmute
+  message.channel.send(new Discord.MessageEmbed()
+        .setTitle('TempMute')
+        .setDescription(`${member} a été mute pendant ${humanizeDuration(duration, {language: 'fr'})} pour ${reason} !`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+    )
+
+tempmutelog
+  member.guild.channels.cache.get(config.greeting.log).send( new Discord.MessageEmbed()
+        .setTitle('TempMute')
+        .setDescription(`Joueur : **${member}**\nModérateur : ** <@${user}> **\nDurée : **${humanizeDuration(duration, {language: 'fr'})}**\nRaison : **${reason}**`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+    )
+
+unmute
+tempmute
+  message.channel.send(new Discord.MessageEmbed()
+        .setTitle('UnMute')
+        .setDescription(`${member} a été unmute pour ${reason} !`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+    )
+
+unmutelog
+ member.guild.channels.cache.get(config.greeting.log).send( new Discord.MessageEmbed()
+        .setTitle('UnMute')
+        .setDescription(`Joueur : **${member}**\nModérateur : ** <@${user}> **\nRaison : **${reason}**`)
+        .setColor(config.embed.color)
+        .setFooter(config.embed.botby, config.embed.logo)
+    )

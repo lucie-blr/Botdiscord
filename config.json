@@ -1,0 +1,31 @@
+{
+    "token": "",
+    "prefix": ".",
+    "greeting": {
+        "channel": "886648715870367805",
+        "role": ["886648705736908810","886648702700240896"],
+        "log": "748947869645537474"
+    },
+    "ticket": {
+        "category": "",
+        "roles": [""]
+    },
+    "embed": {
+        "color": "#003263",
+        "author": "LoliChann",
+        "botby": "Bot by LoliChann",
+        "logo": "https://i.imgur.com/x8Oc4pn.jpeg"
+        
+    },
+    "reactionRole": {       
+        "886655666889035796": {
+            "emojis": [{
+                "name": "✅",
+                "roles": "886648706185723925"
+            }]
+        }
+    },
+    
+    "exnamey": "823674403711746058"
+}
+
